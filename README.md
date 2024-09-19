@@ -22,26 +22,26 @@ npm install http-proxy-middleware
 
 
 # mysql
-show databases;
-create database my_db;
-use my_db;
-show tables;
-CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(50) NOT NULL,
-    email VARCHAR(100) NOT NULL,
-    pwd VARCHAR(10) NOT NULL
-);
+show databases;  
+create database my_db;  
+use my_db;  
+show tables;  
+CREATE TABLE users (  
+    id INT AUTO_INCREMENT PRIMARY KEY,  
+    username VARCHAR(50) NOT NULL,  
+    email VARCHAR(100) NOT NULL,  
+    pwd VARCHAR(10) NOT NULL  
+);  
 
-insert into users(email,username,pwd) values('test1@demo','テスト１','test1');
-insert into users(email,username,pwd) values('test2@demo','テスト２','test2');
-insert into users(email,username,pwd) values('test3@demo','テスト３','test3');
+insert into users(email,username,pwd) values('test1@demo','テスト１','test1');  
+insert into users(email,username,pwd) values('test2@demo','テスト２','test2');  
+insert into users(email,username,pwd) values('test3@demo','テスト３','test3');  
 
 ### mysql in spring boot setting
-spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-spring.datasource.url=jdbc:mysql://127.0.0.1:3306/my_db?useSSL=false&serverTimezone=GMT%2B8&characterEncoding=utf-8
-spring.datasource.username=root
-spring.datasource.password=root
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver  
+spring.datasource.url=jdbc:mysql://127.0.0.1:3306/my_db?useSSL=false&serverTimezone=GMT%2B8&characterEncoding=utf-8  
+spring.datasource.username=root  
+spring.datasource.password=root  
 
 
 
