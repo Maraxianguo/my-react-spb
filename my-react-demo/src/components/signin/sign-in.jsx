@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import logoSvg from "../../assets/react.Svg"
+import logoSvg from "../../assets/711color.png"
+
 
 export default function Lgin() {
 
@@ -43,7 +44,7 @@ export default function Lgin() {
     return (
         <>
             <div className="d-flex align-items-center justify-content-center" style={{ height: '200px' }}>
-                <img src={logoSvg}  style={{ height: '150px' }} />
+                <img src={logoSvg}  style={{ height: '150px',width:'300px' }} />
             </div>
 
             <div className="d-flex align-items-center justify-content-center">
