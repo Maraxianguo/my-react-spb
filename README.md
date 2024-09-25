@@ -20,8 +20,8 @@ npm install axios@latest
 //使用react-create-app时使用，使用vite在vite.config.js里直接写。  
 npm install http-proxy-middleware
 
-### react-router-dom
-npm i react-router-dom
+### react-router-dom  
+npm i react-router-dom  
 
 # mysql
 show databases;  
