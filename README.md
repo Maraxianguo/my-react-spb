@@ -19,7 +19,9 @@ npm install axios@latest
 
 //使用react-create-app时使用，使用vite在vite.config.js里直接写。  
 npm install http-proxy-middleware  
+
 ここはviteの配置：  
+~~~
 vite.config.js：  
 'export default defineConfig({  
   plugins: [react()],  
@@ -34,7 +36,7 @@ vite.config.js：
     }  
   }  
 })  
-'
+~~~
 
 ### react-router-dom  
 npm i react-router-dom  
