@@ -21,7 +21,7 @@ npm install axios@latest
 npm install http-proxy-middleware  
 ここはviteの配置：  
 vite.config.js：  
-export default defineConfig({  
+'export default defineConfig({  
   plugins: [react()],  
   server:{  
     port:5173,  
@@ -34,6 +34,7 @@ export default defineConfig({
     }  
   }  
 })  
+'
 
 ### react-router-dom  
 npm i react-router-dom  
