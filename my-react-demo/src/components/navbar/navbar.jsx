@@ -2,23 +2,28 @@ import { useState } from "react"
 import logo711 from "../../assets/711logo.png"
 import "./navbar.scss"
 
+const getNewDate = () => {
+    const time = new Date();
+    const year = time.getFullYear();
+    const month = time.getMonth() + 1;
+    const mm = month <= 9 ? "0" + month : month
+    const day = time.getDate();
+    const dd = day <= 9 ? "0" + day : day
+    const hour = time.getHours();
+    const hh = hour <= 9 ? "0" + hour : hour
+    const minutes = time.getMinutes();
+    const mi = minutes <= 9 ? "0" + minutes : minutes
+    const seconds = time.getSeconds();
+    const ss = seconds <= 9 ? "0" + seconds : seconds
+    const tt = year + "年" + mm + "月" + dd + "日" + " " + hh + ":" + mi + ":" + ss;
+    return tt
+}
+
 
 export default function Navbar() {
-    const [date, setDate] = useState('')
+    const [date, setDate] = useState(getNewDate)
 
-    const getNewDate = () => {
-        const time = new Date();
-        const year = time.getFullYear();
-        const month = time.getMonth() + 1;
-        const day = time.getDate();
-        const hour = time.getHours();
-        const minutes = time.getMinutes();
-        const seconds = time.getSeconds();
-        const ss = seconds <= 9 ? "0" + seconds : seconds
-        const tt = year + "年" + month + "月" + day + "日" + " " + hour + ":" + minutes + ":" + ss;
-        setDate(tt);
-    }
-    setInterval(getNewDate, 1000);
+    setInterval(()=>{setDate(getNewDate)}, 1000);
 
     const [sideBarActive,setSideBarActive] = useState(false)
 
