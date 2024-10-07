@@ -20,12 +20,14 @@ const getNewDate = () => {
 }
 
 
-export default function Navbar() {
+export default function Navbar(props) {
     const [date, setDate] = useState(getNewDate)
+    
+    setInterval(() => { setDate(getNewDate) }, 1000);
 
-    setInterval(()=>{setDate(getNewDate)}, 1000);
+    const [sideBarActive, setSideBarActive] = useState(false)
 
-    const [sideBarActive,setSideBarActive] = useState(false)
+    
 
     return (
         <>
@@ -33,7 +35,7 @@ export default function Navbar() {
 
                 <nav className="container">
 
-                    <button className="rounded-2" onClick={()=>setSideBarActive(!sideBarActive)}>
+                    <button className="rounded-2" onClick={() => setSideBarActive(!sideBarActive)}>
                         <span className="navbar-toggler-icon" />
                     </button>
 
@@ -49,11 +51,13 @@ export default function Navbar() {
                 </nav>
             </header>
 
-            <div className={sideBarActive?"navbar-collapse offcanvas-collapse active":"navbar-collapse offcanvas-collapse"}>
+            <div className={sideBarActive ? "navbar-collapse offcanvas-collapse active" : "navbar-collapse offcanvas-collapse"}
+                onClick={() => setSideBarActive(!sideBarActive)}>
                 <ul className="navbar-nav ms-5 mt-5">
-                    <li className="nav-item">Test1</li>
-                    <li className="nav-item">Test2</li>
-                    <li className="nav-item">Test3</li>
+                    <li className="nav-item"><a className="nav-link active" href="#" >HOME</a></li>
+                    <li className="nav-item"><a className="nav-link active" href="#" >NEW</a></li>
+                    {/* <li className="nav-item">Test2</li>
+                    <li className="nav-item">Test3</li> */}
                 </ul>
             </div>
         </>
