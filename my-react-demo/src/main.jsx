@@ -12,6 +12,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <Lgin /> */}
     {/* <TestAxios /> */}
-    <Navbar />
+    {/* <Navbar /> */}
+    <App />
   </StrictMode>,
 )

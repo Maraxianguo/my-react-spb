@@ -1,0 +1,16 @@
+@media (min-width:1px){
+    .offcanvas-collapse {
+        position: fixed;
+        top: 80px;
+        left: -300px;
+        bottom: 0;
+        width: 300px;
+        background-color:ghostwhite;
+        transition: .3s;
+
+        &.active{
+            transform: translateX(300px);
+        }
+
+    }
+}
